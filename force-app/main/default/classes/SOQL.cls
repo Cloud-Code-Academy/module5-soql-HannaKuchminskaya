@@ -405,7 +405,7 @@ public with sharing class SOQL {
 			accountIds.add(opp.AccountId);
 		}
 		// Query the Contacts
-		List<Contact> listOfContacts = [SELECT Id, FirstName, Name, AccountId FROM Contact WHERE AccountId IN :accountIds ORDER BY FirstName DESC];
+		List<Contact> listOfContacts = [SELECT Id, FirstName, Name, AccountId FROM Contact WHERE AccountId IN :accountIds ORDER BY FirstName];
 
 		// Loop through each Contact and add the Account Id and Contact to the map
 		Map<Id, Contact> mapOfContactsAndAccounts = new Map<Id, Contact> ();
